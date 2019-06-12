@@ -1,0 +1,52 @@
+$iconWidth: 36px;
+$iconHeight: 36px;
+.operation-warpper {
+  width: toRem($canvas-content-width);
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #0d8cfa;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .opertion {
+    width: toRem($iconWidth);
+    height: toRem($iconHeight);
+    position: absolute;
+    background: #0d8cfa;
+    border-radius: 50%;
+
+    .icon {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      &.icon-delete {
+        @include icon-bg('icon-delete', $iconWidth - 12px, $iconWidth  - 12px);
+      }
+      &.icon-move {
+        cursor: move;
+        @include icon-bg('icon-move',  $iconWidth - 12px, $iconWidth  - 12px);
+      }
+      &.icon-resize {
+        cursor: se-resize;
+        @include icon-bg('icon-resize',  $iconWidth - 12px, $iconWidth  - 12px);
+      }
+    }
+
+    &.left {
+      left: toRem(-$iconWidth / 2);
+    }
+    &.top {
+      top: toRem(-$iconHeight / 2);
+    }
+    &.right {
+      right: toRem(-$iconWidth / 2);
+    }
+    &.bottom {
+      bottom: toRem(-$iconHeight / 2);
+    }
+  }
+}

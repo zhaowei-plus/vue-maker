@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* 默认 640px font-size： 20px */
+$design-default-width: 375;
+$design-target-width: 750;
+$design-default-font-size: 2px;
+
+$default-font-size: 2px;
+$canvas-content-width: 586px;
+/* 去除单位px */
+@function clear-unit($px){
+  @return $px / 1px;
+}
+/* px 转 rem */
+@function toRem($px) {
+  @return clear-unit($px) / clear-unit($default-font-size) * 1px;
+}
+
+
+@function pxTorem($px){
+  @return $px / $design-default-font-size * 1rem;
+}
+
+@function strip-units($number){
+  @return $number / 1px;
+}
+
+@mixin icon-bg($url, $w, $h) {
+  background: url("./img/" + $url +".png");
+  background-size: toRem($w) toRem($h);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+//多个参数
+@mixin remCalc($property, $values...) {
+  $max: length($values);//返回$values列表的长度值
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-units(nth($values, $i));
+    $browser-default-font-size: strip-units($browser-default-font-size);
+    $remValues: #{$remValues + $value / 2 / $browser-default-font-size }rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  }
+
+  #{$property}: $remValues;
+}
+
+
+.error {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,4 @@
+window.localStorage.setItem('token',
+  "eJxl0FFPwjAUBeD3-YpmrxjXrmtdTXxAmEJEsoAI86WZtJCq62pXQCT8d3WY2MTn79ycnHsIAADhw2h6Xi6X9UY77vZGhuAShDA8*0NjlOCl49iKfyg-jLKSlysnbYsxYTGEfkQJqZ1aqd9AKSqlPW7EK28rWkXJ9zGjCaN*RK1bvM9mvWH-fXqDcjMhGUyL7WC-NtaONjNiqihrmK1Nf7ib0zFBb3lXZd3U3g5EqudYSDSJ8kV0jXufL7Zwd89PsIMXxaPZdeqoELS58iqdqk6fQCSJMYE0vvB0K22jan0aDBFBCDH4szo4Bl*RKFw2")
+window.localStorage.setItem('loginId',
+  userInfo.loginId)
