@@ -19,7 +19,7 @@
     "mint-ui": "^2.2.13",
     "node-http-proxy-json": "^0.1.6",
     "px2rem-loader": "^0.1.9",
-    "swiper": "^4.4.2",
+    "swiper": "^6.5.1",
     "vue": "^2.5.2",
     "vue-draggable-resizable": "^1.7.3",
     "vue-router": "^3.0.1",
